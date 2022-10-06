@@ -10,7 +10,7 @@ class AuthorController extends Controller
     
     public function index()
     {
-        $authors = Author::all();
+        $authors = Author::Paginate(4);
         return view('index', ['authors' => $authors]);
     }
     public function find()
